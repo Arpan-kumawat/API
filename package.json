@@ -1,0 +1,30 @@
+{
+  "name": "starter-express-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+  },
+  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "core-js": "^3.27.2",
+    "cors": "^2.8.5",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.4.1",
+    "mongoose": "^6.8.4",
+    "multer": "^1.4.5-lts.1"
+  }
+}
