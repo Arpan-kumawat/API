@@ -152,7 +152,7 @@ app.get("/get/nonvegfood", (req, res) => {
 
 //Routes register
 app.post("/register", (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email,phone, password } = req.body;
   user4.findOne({ email: email }, (err, user) => {
     if (user) {
       res.send({ message: "User already registerd" });
@@ -163,7 +163,8 @@ app.post("/register", (req, res) => {
         name,
         email,
         password,
-        new_Date
+        new_Date,
+        phone
       });
       user23.save((err) => {
         if (err) {
