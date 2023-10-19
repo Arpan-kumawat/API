@@ -155,7 +155,7 @@ app.post("/register", (req, res) => {
   const { name, email,phone, password } = req.body;
   user4.findOne({ email: email }, (err, user) => {
     if (user) {
-      res.send({ message: "User already registerd" });
+      res.status(500).send({ message: "User already registerd" });
     } else {
       const new_Date = new Date().toLocaleDateString();
  
@@ -168,9 +168,9 @@ app.post("/register", (req, res) => {
       });
       user23.save((err) => {
         if (err) {
-          res.send(err);
+          res.status(500).send(err);
         } else {
-          res.send({ message: "Successfully Registered, Please login now." });
+          res.status(200).send({ message: "Successfully Registered, Please login now." });
         }
       });
     }
@@ -185,10 +185,10 @@ app.post("/login", (req, res) => {
       if (password === user.password) {
         res.send({ message: "Login Successfull", user: user });
       } else {
-        res.send({ message: "Password didn't match" });
+        res.status(500).send({ message: "Password didn't match" });
       }
     } else {
-      res.send({ message: "User not registered" });
+      res.status(400).send({ message: "User not registered" });
     }
   });
 });
